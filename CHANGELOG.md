@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.559 (2026-11-01)
+
+### PR [#2325](https://github.com/danielmiessler/Fabric/pull/2325) by [bigconnect](https://github.com/bigconnect): feat(providers): add llm.buzz as an OpenAI-compatible provider
+
+- Feat: add llm.buzz as an OpenAI-compatible provider
+
 ## v1.4.558 (2026-11-01)
 
 ### PR [#2321](https://github.com/danielmiessler/Fabric/pull/2321) by [wozhenbang2004](https://github.com/wozhenbang2004) and
