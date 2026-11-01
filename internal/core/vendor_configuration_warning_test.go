@@ -45,14 +45,15 @@ func TestConfigureVendorsReportsConfiguredFailures(t *testing.T) {
 
 			registry.ConfigureVendors()
 
-			if got := strings.Contains(output.String(), "LiteLLM"); got != tc.wantWarn {
-				t.Errorf("warning = %q, want warning %v", output.String(), tc.wantWarn)
+			out := output.String()
+			if got := strings.Contains(out, "LiteLLM"); got != tc.wantWarn {
+				t.Errorf("warning = %q, want warning %v", out, tc.wantWarn)
 			}
-			if tc.wantWarn && !strings.Contains(output.String(), tc.baseURL[:strings.LastIndex(tc.baseURL, "/")]) {
-				t.Errorf("warning does not explain which endpoint failed: %q", output.String())
+			if tc.wantWarn && !strings.Contains(out, tc.baseURL[:strings.LastIndex(tc.baseURL, "/")]) {
+				t.Errorf("warning does not explain which endpoint failed: %q", out)
 			}
-			if strings.Contains(output.String(), "synthetic-key") {
-				t.Errorf("warning contains the API key: %q", output.String())
+			if strings.Contains(out, "synthetic-key") {
+				t.Errorf("warning contains the API key: %q", out)
 			}
 			if got := registry.VendorManager.FindByName("LiteLLM") != nil; got != tc.wantActive {
 				t.Errorf("vendor active = %v, want %v", got, tc.wantActive)
