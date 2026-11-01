@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.561 (2026-11-01)
+
+### PR [#2323](https://github.com/danielmiessler/Fabric/pull/2323) by [tanishqbaweja](https://github.com/tanishqbaweja) and [ksylvan](https://github.com/ksylvan): fix(cli): stop config.yaml from overriding flags and zeroing options it omits
+
+- Fix `config.yaml` resetting every option it leaves out to zero: a config with a single key such as `ytDlpArgs:` or `notification: true` no longer runs with temperature 0 and top_p 0.
+- Fix command-line flags losing to `config.yaml` when written as bundled short flags (`-sp summarize`), attached values (`-t0.2`) or the Windows forms (`/t 0.2`, `/temperature:0.2`).
+
 ## v1.4.560 (2026-10-28)
 
 ### PR [#2320](https://github.com/danielmiessler/Fabric/pull/2320) by [jaeminbird](https://github.com/jaeminbird): fix(plugins): match zoned IPv6 hosts and normalize FABRIC_ALLOW_INSECURE_LAN entries
