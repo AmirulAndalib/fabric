@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.557 (2026-10-27)
+
+### PR [#2318](https://github.com/danielmiessler/Fabric/pull/2318) by [Adam-Dalloul](https://github.com/Adam-Dalloul): feat: add EmpirioLabs AI as an OpenAI-compatible provider
+
+- Feat: add EmpirioLabs AI as an OpenAI-compatible provider
+
 ## v1.4.556 (2026-10-26)
 
 ### PR [#2312](https://github.com/danielmiessler/Fabric/pull/2312) by [mrhy7176](https://github.com/mrhy7176): feat: add CloudGPU as an OpenAI-compatible provider

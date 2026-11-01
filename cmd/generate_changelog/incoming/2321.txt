@@ -1,0 +1,4 @@
+### PR [#2321](https://github.com/danielmiessler/Fabric/pull/2321) by [wozhenbang2004](https://github.com/wozhenbang2004) and
+[ksylvan](https://github.com/ksylvan): fix: report configured vendor initialization failures
+
+- Fix: report configured vendor initialization failures
