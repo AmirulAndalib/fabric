@@ -179,7 +179,7 @@ func Init() (ret *Flags, err error) {
 
 	if ret.Config != "" {
 		var yamlFlags *Flags
-		var yamlKeys map[string]bool
+		var yamlKeys map[string]any
 		if yamlFlags, yamlKeys, err = loadYAMLConfig(ret.Config); err != nil {
 			return
 		}
@@ -192,7 +192,7 @@ func Init() (ret *Flags, err error) {
 		for i := 0; i < flagsType.NumField(); i++ {
 			field := flagsType.Field(i)
 			if yamlTag := field.Tag.Get("yaml"); yamlTag != "" {
-				if yamlKeys[yamlTag] && !usedFlags[yamlTag] {
+				if _, inYAML := yamlKeys[yamlTag]; inYAML && !usedFlags[yamlTag] {
 					flagField := flagsVal.Field(i)
 					yamlField := yamlVal.Field(i)
 					if flagField.CanSet() {
@@ -276,7 +276,7 @@ func assignWithConversion(targetField, sourceField reflect.Value) error {
 }
 
 // loadYAMLConfig returns the flags from the config file and the set of keys the file contains.
-func loadYAMLConfig(configPath string) (*Flags, map[string]bool, error) {
+func loadYAMLConfig(configPath string) (*Flags, map[string]any, error) {
 	absPath, err := util.GetAbsolutePath(configPath)
 	if err != nil {
 		return nil, nil, fmt.Errorf(i18n.T("invalid_config_path"), err)
@@ -299,14 +299,10 @@ func loadYAMLConfig(configPath string) (*Flags, map[string]bool, error) {
 	if err := yaml.Unmarshal(data, &values); err != nil {
 		return nil, nil, fmt.Errorf(i18n.T("error_parsing_config_file"), err)
 	}
-	keys := make(map[string]bool, len(values))
-	for key := range values {
-		keys[key] = true
-	}
 
 	debuglog.Debug(debuglog.Detailed, "Config: %v\n", config)
 
-	return config, keys, nil
+	return config, values, nil
 }
 
 func readStdin() (ret string, err error) {
