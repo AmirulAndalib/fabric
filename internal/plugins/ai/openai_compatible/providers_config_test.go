@@ -118,6 +118,11 @@ func TestCreateClient(t *testing.T) {
 			exists:   true,
 		},
 		{
+			name:     "Existing provider - EmpirioLabs AI",
+			provider: "EmpirioLabs AI",
+			exists:   true,
+		},
+		{
 			name:     "Existing provider - FuturMix",
 			provider: "FuturMix",
 			exists:   true,
@@ -135,6 +140,11 @@ func TestCreateClient(t *testing.T) {
 		{
 			name:     "New Chinese provider - ByteDance Ark",
 			provider: "ByteDance Ark",
+			exists:   true,
+		},
+		{
+			name:     "Existing provider - llm.buzz",
+			provider: "llm.buzz",
 			exists:   true,
 		},
 		{

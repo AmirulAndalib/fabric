@@ -378,6 +378,7 @@ Fabric 支持广泛的 AI 供应商：
 - Hostinger Router
 - Langdock
 - LiteLLM
+- llm.buzz
 - MiniMax
 - Mistral
 - Novita AI
