@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.558 (2026-11-01)
+
+### PR [#2321](https://github.com/danielmiessler/Fabric/pull/2321) by [wozhenbang2004](https://github.com/wozhenbang2004) and
+[ksylvan](https://github.com/ksylvan): fix: report configured vendor initialization failures
+
+- Fix: report configured vendor initialization failures
+
 ## v1.4.557 (2026-10-27)
 
 ### PR [#2318](https://github.com/danielmiessler/Fabric/pull/2318) by [Adam-Dalloul](https://github.com/Adam-Dalloul): feat: add EmpirioLabs AI as an OpenAI-compatible provider
