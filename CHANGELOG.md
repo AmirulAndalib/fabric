@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.562 (2026-11-01)
+
+### PR [#2319](https://github.com/danielmiessler/Fabric/pull/2319) by [nicho810](https://github.com/nicho810): feat(providers): add cheapaimodel as an OpenAI-compatible provider
+
+- Feat: add cheapaimodel as an OpenAI-compatible provider
+
 ## v1.4.561 (2026-11-01)
 
 ### PR [#2323](https://github.com/danielmiessler/Fabric/pull/2323) by [tanishqbaweja](https://github.com/tanishqbaweja) and [ksylvan](https://github.com/ksylvan): fix(cli): stop config.yaml from overriding flags and zeroing options it omits
