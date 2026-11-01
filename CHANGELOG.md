@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.4.560 (2026-10-28)
+
+### PR [#2320](https://github.com/danielmiessler/Fabric/pull/2320) by [jaeminbird](https://github.com/jaeminbird): fix(plugins): match zoned IPv6 hosts and normalize FABRIC_ALLOW_INSECURE_LAN entries
+
+- `FABRIC_ALLOW_INSECURE_LAN` CIDR and exact-IP entries now match zoned IPv6 hosts such as `http://[fe80::1%25eth0]:11434`, which only the `lan` keyword allowed before.
+- Allowlist entries are trimmed of `[]` brackets and a trailing dot, so `[fd00::5]` and `nas.lan.` match like `fd00::5` and `nas.lan`.
+
+## v1.4.559 (2026-11-01)
+
+### PR [#2325](https://github.com/danielmiessler/Fabric/pull/2325) by [bigconnect](https://github.com/bigconnect): feat(providers): add llm.buzz as an OpenAI-compatible provider
+
+- Feat: add llm.buzz as an OpenAI-compatible provider
+
+## v1.4.558 (2026-11-01)
+
+### PR [#2321](https://github.com/danielmiessler/Fabric/pull/2321) by [wozhenbang2004](https://github.com/wozhenbang2004) and
+[ksylvan](https://github.com/ksylvan): fix: report configured vendor initialization failures
+
+- Fix: report configured vendor initialization failures
+
+## v1.4.557 (2026-10-27)
+
+### PR [#2318](https://github.com/danielmiessler/Fabric/pull/2318) by [Adam-Dalloul](https://github.com/Adam-Dalloul): feat: add EmpirioLabs AI as an OpenAI-compatible provider
+
+- Feat: add EmpirioLabs AI as an OpenAI-compatible provider
+
 ## v1.4.556 (2026-10-26)
 
 ### PR [#2312](https://github.com/danielmiessler/Fabric/pull/2312) by [mrhy7176](https://github.com/mrhy7176): feat: add CloudGPU as an OpenAI-compatible provider

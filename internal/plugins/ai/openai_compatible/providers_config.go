@@ -303,6 +303,11 @@ var ProviderMap = map[string]ProviderConfig{
 		BaseURL:             "https://api.edenai.run/v3",
 		ImplementsResponses: false,
 	},
+	"EmpirioLabs AI": {
+		Name:                "EmpirioLabs AI",
+		BaseURL:             "https://api.empiriolabs.ai/v1",
+		ImplementsResponses: false,
+	},
 	"FuturMix": {
 		Name:                "FuturMix",
 		BaseURL:             "https://futurmix.ai/v1",
@@ -340,6 +345,11 @@ var ProviderMap = map[string]ProviderConfig{
 	"LiteLLM": {
 		Name:                "LiteLLM",
 		BaseURL:             "http://localhost:4000",
+		ImplementsResponses: false,
+	},
+	"llm.buzz": {
+		Name:                "llm.buzz",
+		BaseURL:             "https://api.llm.buzz/api/v1",
 		ImplementsResponses: false,
 	},
 	"llmman": {
