@@ -458,7 +458,7 @@ func (o *PluginRegistry) ConfigureVendors() {
 			if vendor.IsConfigured() {
 				debuglog.Log("%s: %v\n", fmt.Sprintf(i18n.T("vendor_not_configured"), vendor.GetName()), vendorErr)
 			} else {
-				debuglog.Debug(debuglog.Trace, "vendor %s not configured: %v\n", vendor.GetName(), vendorErr)
+				debuglog.Debug(debuglog.Trace, "%s: %v\n", fmt.Sprintf(i18n.T("vendor_not_configured"), vendor.GetName()), vendorErr)
 			}
 		} else if vendor.IsConfigured() {
 			o.VendorManager.AddVendors(vendor)
